@@ -1,0 +1,82 @@
+        Tue, 23 Apr 2019 20:28:56 -0300 (BRT)
+Date: Tue, 23 Apr 2019 20:28:55 -0300 (BRT)
+From: joaoemilio@gmail.com
+To: joao@wso2.com
+Message-ID: <727279901.01556062136703.JavaMail.joaoemilio@MacBook-Joao.local>
+Subject: WSO2 - Account Confirmation
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<table align="center" cellpadding="0" cellspacing="0" border="0" width="100%"bgcolor="#f0f0f0">
+            <tr>
+            <td style="padding: 30px 30px 20px 30px;">
+                <table cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="#ffffff" style="max-width: 650px; margin: auto;">
+                <tr>
+                    <td colspan="2" align="center" style="background-color: #333; padding: 40px;">
+                        <a href="http://wso2.com/" target="_blank"><img src="http://cdn.wso2.com/wso2/newsletter/images/nl-2017/wso2-logo-transparent.png" border="0" /></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding: 50px 50px 0px 50px;">
+                        <h1 style="padding-right: 0em; margin: 0; line-height: 40px; font-weight:300; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 1em;">
+                            Account Confirmation
+                        </h1>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; padding: 0px 50px 20px 50px;" valign="top">
+                        <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
+                            Hi Fabio,
+                        </p>
+                        <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #666; text-align: left; padding-bottom: 3%;">
+                            You have created an account with the following user name. <br>
+                            User Name: <b>fabio</b><br>
+                            Please click the button below to confirm your account.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px 50px 0px 50px; text-align: left;">
+                        <table align="left" cellpadding="0" cellspacing="0" border="0" style="border-radius: 4px; background-color: #ff5000;">
+                            <tr>
+                                <td style="border-radius: 6px;  padding: 14px 0px;">
+                                    <a href="https://localhost:9443/accountrecoveryendpoint/confirmregistration.do?confirmation=6652f216-27de-4e63-8adb-cb2f89861e95&amp;userstoredomain=PRIMARY&amp;username=fabio&amp;tenantdomain=carbon.super&amp;callback=https%3A%2F%2Flocalhost%3A9443%2Fauthenticationendpoint%2Flogin.do%3FSSOAuthSessionID%3DF400A7D3F7F068237E86F3622D7DD5F16E5EBA621ECFF895DA7BF40D239DF6510A2634B8145378F05D9AC00CCA6975F9BB17A9399F2BFB79C7669ED8DD95E295434C7F5EF5D7A5D7D133FAE1A83866AACB4B3AD43853CAF205F04EEF0ECD7089107767268CEB06FD03B8705B36535CE1230DD6623307546471B7510E4500F02E%26commonAuthCallerPath%3D%252Fsamlsso%26forceAuth%3Dfalse%26passiveAuth%3Dfalse%26tenantDomain%3Dcarbon.super%26sessionDataKey%3D34f5a166-a548-42b8-abf2-dc53ed7d037c%26relyingParty%3Dwso2.my.dashboard%26type%3Dsamlsso%26sp%3Dwso2_sp_dashboard%26isSaaSApp%3Dtrue%26authenticators%3DBasicAuthenticator%3ALOCAL"
+                                       target="_blank" style="width: 230px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif;  font-size: 18px; line-height: 21px; font-weight: 600; color: #fff; text-decoration: none; background-color: #ff5000; text-align: center; display: inline-block;cursor: pointer;">Confirm Account</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; padding: 40px 50px 0px 50px;" valign="top">
+                        <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
+                            If clicking the button doesn't seem to work, you can copy and paste the following link into your browser. <br/>
+                            <a style="word-break: break-all; color: #ff5000; font-size: 14px" target="_blank"
+                               href="https://localhost:9443/accountrecoveryendpoint/confirmregistration.do?confirmation=6652f216-27de-4e63-8adb-cb2f89861e95&amp;userstoredomain=PRIMARY&amp;username=fabio&amp;tenantdomain=carbon.super&amp;callback=https%3A%2F%2Flocalhost%3A9443%2Fauthenticationendpoint%2Flogin.do%3FSSOAuthSessionID%3DF400A7D3F7F068237E86F3622D7DD5F16E5EBA621ECFF895DA7BF40D239DF6510A2634B8145378F05D9AC00CCA6975F9BB17A9399F2BFB79C7669ED8DD95E295434C7F5EF5D7A5D7D133FAE1A83866AACB4B3AD43853CAF205F04EEF0ECD7089107767268CEB06FD03B8705B36535CE1230DD6623307546471B7510E4500F02E%26commonAuthCallerPath%3D%252Fsamlsso%26forceAuth%3Dfalse%26passiveAuth%3Dfalse%26tenantDomain%3Dcarbon.super%26sessionDataKey%3D34f5a166-a548-42b8-abf2-dc53ed7d037c%26relyingParty%3Dwso2.my.dashboard%26type%3Dsamlsso%26sp%3Dwso2_sp_dashboard%26isSaaSApp%3Dtrue%26authenticators%3DBasicAuthenticator%3ALOCAL">
+                                https://localhost:9443/accountrecoveryendpoint/confirmregistration.do?confirmation=6652f216-27de-4e63-8adb-cb2f89861e95&amp;userstoredomain=PRIMARY&amp;username=fabio&amp;tenantdomain=carbon.super&amp;callback=https%3A%2F%2Flocalhost%3A9443%2Fauthenticationendpoint%2Flogin.do%3FSSOAuthSessionID%3DF400A7D3F7F068237E86F3622D7DD5F16E5EBA621ECFF895DA7BF40D239DF6510A2634B8145378F05D9AC00CCA6975F9BB17A9399F2BFB79C7669ED8DD95E295434C7F5EF5D7A5D7D133FAE1A83866AACB4B3AD43853CAF205F04EEF0ECD7089107767268CEB06FD03B8705B36535CE1230DD6623307546471B7510E4500F02E%26commonAuthCallerPath%3D%252Fsamlsso%26forceAuth%3Dfalse%26passiveAuth%3Dfalse%26tenantDomain%3Dcarbon.super%26sessionDataKey%3D34f5a166-a548-42b8-abf2-dc53ed7d037c%26relyingParty%3Dwso2.my.dashboard%26type%3Dsamlsso%26sp%3Dwso2_sp_dashboard%26isSaaSApp%3Dtrue%26authenticators%3DBasicAuthenticator%3ALOCAL
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: left; padding: 30px 50px 50px 50px;" valign="top">
+                        <p style="font-size: 18px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #505050; text-align: left;">
+                            Thanks,<br/>WSO2 Identity Server Team
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center" style="padding: 20px 40px 40px 40px;" bgcolor="#f0f0f0">
+                        <p style="font-size: 12px; margin: 0; line-height: 24px; font-family: 'Nunito Sans', Arial, Verdana, Helvetica, sans-serif; color: #777;">
+                            &copy; 2018
+                            <a href="http://wso2.com/" target="_blank" style="color: #777; text-decoration: none">WSO2</a>
+                            <br>
+                            787 Castro Street, Mountain View, CA 94041.
+                        </p>
+                    </td>
+                </tr>
+                </table>
+            </td>
+            </tr>
+        </table>---
