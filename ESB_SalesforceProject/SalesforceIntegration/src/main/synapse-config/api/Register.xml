@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/register" name="Register" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET">
+        <inSequence>
+            <salesforce.init>
+                <username>integrator@wso2.com</username>
+                <password>enterprisewso2RlTSdhJZbjIEjYPfe5WWGEvY6</password>
+                <loginUrl>https://login.salesforce.com/services/Soap/u/40.0</loginUrl>
+                <blocking>false</blocking>
+            </salesforce.init>
+            <payloadFactory media-type="xml">
+                <format>
+                    <sfdc:sObjects type="Lead" xmlns:sfdc="sfdc">
+                        <sfdc:sObject>
+                            <sfdc:City>São Paulo</sfdc:City>
+                            <sfdc:State>São Paulo</sfdc:State>
+                            <sfdc:Title>Mr</sfdc:Title>
+                            <sfdc:Status>Working</sfdc:Status>
+                            <sfdc:Company>WSO2</sfdc:Company>
+                            <sfdc:Country>Brazil</sfdc:Country>
+                            <sfdc:LastName>ZUAUM</sfdc:LastName>
+                            <sfdc:Email>pedro@wso2.com</sfdc:Email>
+                            <sfdc:Phone>7577574</sfdc:Phone>
+                        </sfdc:sObject>
+                    </sfdc:sObjects>
+                </format>
+                <args/>
+            </payloadFactory>
+            <salesforce.create>
+                <allOrNone>0</allOrNone>
+                <allowFieldTruncate>0</allowFieldTruncate>
+                <sobjects xmlns:sfdc="sfdc">{//sfdc:sObjects}</sobjects>
+            </salesforce.create>
+            <respond/>
+        </inSequence>
+        <outSequence>
+            <send/>
+        </outSequence>
+        <faultSequence>
+            <log category="DEBUG" level="full"/>
+        </faultSequence>
+    </resource>
+</api>
