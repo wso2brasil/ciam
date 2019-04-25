@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="OAuth2" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="post" uri-template="https://localhost:9443/oauth2/token"/>
+</endpoint>

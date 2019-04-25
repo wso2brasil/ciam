@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <api context="/register" name="Register" xmlns="http://ws.apache.org/ns/synapse">
-    <resource methods="GET">
+    <resource methods="POST">
         <inSequence>
+            <property expression="json-eval($.givenname)" name="givenname" scope="default" type="STRING"/>
+            <property expression="json-eval($.lastname)" name="lastname" scope="default" type="STRING"/>
+            <property expression="json-eval($.mobile)" name="mobile" scope="default" type="STRING"/>
+            <property expression="json-eval($.email)" name="email" scope="default" type="STRING"/>
+            <sequence key="ISRegister"/>
             <salesforce.init>
                 <username>integrator@wso2.com</username>
                 <password>enterprisewso2RlTSdhJZbjIEjYPfe5WWGEvY6</password>
                 <loginUrl>https://login.salesforce.com/services/Soap/u/40.0</loginUrl>
                 <blocking>false</blocking>
             </salesforce.init>
+            <log>
+                <property expression="json-eval($)" name="salesforce"/>
+            </log>
             <payloadFactory media-type="xml">
                 <format>
                     <sfdc:sObjects type="Lead" xmlns:sfdc="sfdc">
@@ -18,13 +26,19 @@
                             <sfdc:Status>Working</sfdc:Status>
                             <sfdc:Company>WSO2</sfdc:Company>
                             <sfdc:Country>Brazil</sfdc:Country>
-                            <sfdc:LastName>ZUAUM</sfdc:LastName>
-                            <sfdc:Email>pedro@wso2.com</sfdc:Email>
-                            <sfdc:Phone>7577574</sfdc:Phone>
+                            <sfdc:Email>$1</sfdc:Email>
+                            <sfdc:LastName>$2</sfdc:LastName>
+                            <sfdc:Phone>$3</sfdc:Phone>
+                            <sfdc:FirstName>$4</sfdc:FirstName>
                         </sfdc:sObject>
                     </sfdc:sObjects>
                 </format>
-                <args/>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:email"/>
+                    <arg evaluator="xml" expression="$ctx:lastname"/>
+                    <arg evaluator="xml" expression="$ctx:mobile"/>
+                    <arg evaluator="xml" expression="$ctx:givenname"/>
+                </args>
             </payloadFactory>
             <salesforce.create>
                 <allOrNone>0</allOrNone>

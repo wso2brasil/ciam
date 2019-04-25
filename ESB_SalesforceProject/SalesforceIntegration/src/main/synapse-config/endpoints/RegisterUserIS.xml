@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="RegisterUserIS" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="post" uri-template="https://localhost:9443/api/identity/user/v1.0/me"/>
+</endpoint>

@@ -2,4 +2,13 @@
     <artifact name="Register" groupId="com.example.SalesforceIntegration.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/api/Register.xml</file>
     </artifact>
+    <artifact name="ISRegister" groupId="com.example.SalesforceIntegration.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/sequences/ISRegister.xml</file>
+    </artifact>
+    <artifact name="OAuth2" groupId="com.example.SalesforceIntegration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/OAuth2.xml</file>
+    </artifact>
+    <artifact name="RegisterUserIS" groupId="com.example.SalesforceIntegration.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/RegisterUserIS.xml</file>
+    </artifact>
 </artifacts>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sequence name="ISRegister" trace="disable" xmlns="http://ws.apache.org/ns/synapse">
+    <property expression="json-eval($.username)" name="username" scope="default" type="STRING"/>
+    <property expression="json-eval($.password)" name="password" scope="default" type="STRING"/>
+    <property expression="json-eval($.givenname)" name="givenname" scope="default" type="STRING"/>
+    <property expression="json-eval($.lastname)" name="lastname" scope="default" type="STRING"/>
+    <property expression="json-eval($.mobile)" name="mobile" scope="default" type="STRING"/>
+    <property expression="json-eval($.email)" name="email" scope="default" type="STRING"/>
+    <property name="Accept" scope="default" type="STRING" value="application/json"/>
+    <property expression="get-property('axis2','REST_URL_POSTFIX')" name="resource" scope="default" type="STRING"/>
+    <payloadFactory media-type="xml">
+        <format>
+            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                <soapenv:Body>
+                    <root xmlns="">
+                        <grant_type>client_credentials</grant_type>
+                    </root>
+                </soapenv:Body>
+            </soapenv:Envelope>
+        </format>
+        <args/>
+    </payloadFactory>
+    <header expression="fn:concat('Basic ', base64Encode('hxeDY775u13gNxXt4x_oFXHX69oa:He8Y2apncV9iiF_rOw1T2NbCdToa'))" name="Authorization" scope="transport"/>
+    <header name="Content-Type" scope="transport" value="application/x-www-form-urlencoded"/>
+    <property description="messageType" name="messageType" scope="axis2" type="STRING" value="application/x-www-form-urlencoded"/>
+    <property description="REST_URL_POSTFIX" name="REST_URL_POSTFIX" scope="axis2" type="STRING" value=""/>
+    <call blocking="true">
+        <endpoint key="OAuth2"/>
+    </call>
+    <property expression="get-property('resource')" name="REST_URL_POSTFIX" scope="axis2" type="STRING"/>
+    <property expression="json-eval($.access_token)" name="token" scope="default" type="STRING"/>
+    <property name="ContentType" scope="axis2" type="STRING" value="application/json"/>
+    <property expression="fn:concat('Bearer ', $ctx:token)" name="Authorization" scope="transport" type="STRING" xmlns:ns="http://org.apache.synapse/xsd"/>
+    <payloadFactory media-type="json">
+        <format>{
+			"user" : {
+			"username" : "$1",
+			"realm" : "PRIMARY",
+			"password" : "$2",
+			"claims" : [
+			{
+			"uri" : "http://wso2.org/claims/givenname",
+			"value" : "$3"
+			},
+			{
+			"uri" : "http://wso2.org/claims/emailaddress",
+			"value" : "$4"
+			},
+			{
+			"uri" : "http://wso2.org/claims/lastname",
+			"value" : "$5"
+			},
+			{
+			"uri" : "http://wso2.org/claims/mobile",
+			"value" : "$6"
+			}
+			]
+			},
+			"properties" : []
+			}</format>
+        <args>
+            <arg evaluator="xml" expression="$ctx:username"/>
+            <arg evaluator="xml" expression="$ctx:password"/>
+            <arg evaluator="xml" expression="$ctx:givenname"/>
+            <arg evaluator="xml" expression="$ctx:email"/>
+            <arg evaluator="xml" expression="$ctx:lastname"/>
+            <arg evaluator="xml" expression="$ctx:mobile"/>
+        </args>
+    </payloadFactory>
+    <call blocking="true">
+        <endpoint key="RegisterUserIS"/>
+    </call>
+</sequence>
