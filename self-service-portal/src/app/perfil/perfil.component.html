@@ -1,6 +1,37 @@
-
-      <mat-card>
-        <mat-card-title>PERFIL</mat-card-title>
-        <mat-card-subtitle>MEUS DADOS</mat-card-subtitle>
-        <mat-divider></mat-divider>
-      </mat-card>
+<mat-card flex-gt-sm>
+  <mat-card-title>Meus Dados</mat-card-title>
+  <mat-card-subtitle>Dados do perfil cadastrado no WSO2 Identity Server</mat-card-subtitle>
+  <mat-divider></mat-divider>
+  <mat-list>
+    <h3 matSubheader>Dados Pessoais</h3>
+    <mat-list-item>
+      <mat-icon matListAvatar>account_box</mat-icon>
+      <h4 matLine>Nome</h4>
+      <p matLine>{{perfil.nome}}</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+    <mat-list-item>
+      <mat-icon matListAvatar>description</mat-icon>
+      <h4 matLine>Endereço</h4>
+      <p matLine>{{perfil.endereco}}</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+    <mat-list-item>
+      <mat-icon matListAvatar>vpn_key</mat-icon>
+      <h4 matLine>Celular</h4>
+      <p matLine>{{perfil.celular}}</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <h3 matSubheader>Dates</h3>
+    <mat-list-item>
+      <mat-icon matListAvatar>access_time</mat-icon>
+      <h4 matLine>Nascimento</h4>
+      <p matLine>{{perfil.nascimento}}</p>
+    </mat-list-item>
+    <mat-divider matInset></mat-divider>
+  </mat-list>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-button color="accent" class="text-upper">Edit</button>
+  </mat-card-actions>
+</mat-card>

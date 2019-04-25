@@ -25,6 +25,16 @@ export class PerfilComponent implements OnInit {
   items: Object[];
   products: Object[];
   alerts: Object[];
+  perfil = {
+    nome: "Joao Emilio Santos Bento da Silva",
+    endereco: "Rua Visconde de Abaete, 53 apt 501",
+    bairro: "Vila Isabel",
+    cidade: "Rio de Janeiro",
+    estado: "RJ",
+    pais: "Brasil",
+    celular: "(21) 96763-3343",
+    nascimento: "21 de Janeiro de 1980"
+  }
 
   // Chart
   single: any[];
