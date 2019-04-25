@@ -5,6 +5,12 @@ Demo para apresentar as funcionalidades da plataforma WSO2 para atender completa
 
 Para acessar o Salesforce, basta acessar conforme os dados abaixo
 
+```
+Usuário: <enviado por email>
+Senha: <enviado por e-mail>
+url: www.salesforce.com
+```
+
 # Configuração do Projeto ESB
 
 ## Alterar o ClientID e o ClienteSecret de consumo do IS (OBRIGATÓRIO)
@@ -30,6 +36,7 @@ Para consumir o serviço responsável por registrar um usuário no Identity Serv
 Contexto: /register
 Request Method: POST
 Body: 
+```
 {
 	"username" : "joaoemilio",		
 	"password" : "abcd1234",
@@ -38,3 +45,4 @@ Body:
 	"lastname" : "Zuaum",
 	"mobile" : "11999994444"
 }
+```
