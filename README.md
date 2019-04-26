@@ -56,10 +56,17 @@ Body:
 	- /Volumes/wso2is-5.7.0/is/deployment/client
 	- /Volumes/wso2is-5.7.0/is/deployment/server
 
+	OBS: alterar a permissão das pastas de acordo com o usuário local.
+	
+	ex: execute o comando ```id``` para ver o usuário e grupo
+	```uid=501(fabio) gid=20(staff) groups=20(staff),12(everyone),61(localaccounts),79(_appserverusr),80(admin),81(_appserveradm),98(_lpadmin),701(com.apple.sharepoint.group.1),33(_appstore),100(_lpoperator),204(_developer),250(_analyticsusers),395(com.apple.access_ftp),398(com.apple.access_screensharing),399(com.apple.access_ssh)```
+	mude a permissão com o chmod 775
+	mude o grupo com o chown
+
 2. Copiar as aplicações WEB para a pasta /Volumes/wso2is-5.7.0/is/deployment/server/webapps	
 
 3. Copiar os arquivos do banco MySQL para /Volumes/wso2is-5.7.0/is/mysql
 
-4. Executar o script /k8s/scripts/deploy
+4. Executar o script /k8s/scripts/deploy.sh
 	- configurar usuário e senha WSO2 para realizar o download das imagens
  
