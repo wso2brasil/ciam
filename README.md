@@ -46,3 +46,20 @@ Body:
 	"mobile" : "11999994444"
 }
 ```
+
+## Configuração dos Volumes para o IS - MAC OS
+
+1. Acessar a pasta /Volumes e crias as seguintes pastas
+	- /Volumes/wso2is-5.7.0/is/mysql
+	- /Volumes/wso2is-5.7.0/is/repository
+	- /Volumes/wso2is-5.7.0/is/deployment
+	- /Volumes/wso2is-5.7.0/is/deployment/client
+	- /Volumes/wso2is-5.7.0/is/deployment/server
+
+2. Copiar as aplicações WEB para a pasta /Volumes/wso2is-5.7.0/is/deployment/server/webapps	
+
+3. Copiar os arquivos do banco MySQL para /Volumes/wso2is-5.7.0/is/mysql
+
+4. Executar o script /k8s/scripts/deploy
+	- configurar usuário e senha WSO2 para realizar o download das imagens
+ 
