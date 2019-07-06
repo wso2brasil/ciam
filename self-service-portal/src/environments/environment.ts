@@ -6,7 +6,7 @@
 export const environment = {
   production: false,
   api_gateway_url: 'https://localhost:8243',
-  user_info_url: "https://localhost:8243/userinfo",
+  user_info_url: "https://localhost:9443/oauth2/userinfo",
   username: "",
   openid : {
     strictDiscoveryDocumentValidation : false,

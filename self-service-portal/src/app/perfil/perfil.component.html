@@ -7,26 +7,26 @@
     <mat-list-item>
       <mat-icon matListAvatar>account_box</mat-icon>
       <h4 matLine>Nome</h4>
-      <p matLine>{{perfil.nome}}</p>
+      <p matLine>{{perfil.name.givenName}}</p>
     </mat-list-item>
     <mat-divider matInset></mat-divider>
     <mat-list-item>
       <mat-icon matListAvatar>description</mat-icon>
       <h4 matLine>Endereço</h4>
-      <p matLine>{{perfil.endereco}}</p>
+      <p matLine>{{perfil.name.lastName}}</p>
     </mat-list-item>
     <mat-divider matInset></mat-divider>
     <mat-list-item>
       <mat-icon matListAvatar>vpn_key</mat-icon>
-      <h4 matLine>Celular</h4>
-      <p matLine>{{perfil.celular}}</p>
+      <h4 matLine>Email</h4>
+      <p matLine>{{perfil.emails}}</p>
     </mat-list-item>
     <mat-divider></mat-divider>
     <h3 matSubheader>Dates</h3>
     <mat-list-item>
       <mat-icon matListAvatar>access_time</mat-icon>
       <h4 matLine>Nascimento</h4>
-      <p matLine>{{perfil.nascimento}}</p>
+      <p matLine></p>
     </mat-list-item>
     <mat-divider matInset></mat-divider>
   </mat-list>

@@ -10,62 +10,36 @@ import { ItemsService, ProductsService, AlertsService } from '../../services';
 import { OAuthService } from 'angular-oauth2-oidc';
 import { UserManagerService } from '../../services/usermanager.service';
 import { environment } from '../../environments/environment';
+import { Perfil } from './perfil';
 
 @Component({
   selector: 'qs-perfil',
   templateUrl: './perfil.component.html',
   styleUrls: ['./perfil.component.scss'],
-  viewProviders: [ ],
+  viewProviders: [ UserManagerService ],
 })
 export class PerfilComponent implements OnInit {
 
-  // Current date
-  year: any = new Date().getFullYear();
-  _env = environment;
-  items: Object[];
-  products: Object[];
-  alerts: Object[];
-  perfil = {
-    nome: "Joao Emilio Santos Bento da Silva",
-    endereco: "Rua Visconde de Abaete, 53 apt 501",
-    bairro: "Vila Isabel",
-    cidade: "Rio de Janeiro",
-    estado: "RJ",
-    pais: "Brasil",
-    celular: "(21) 96763-3343",
-    nascimento: "21 de Janeiro de 1980"
-  }
+  private perfil: Perfil = new Perfil();
 
-  // Chart
-  single: any[];
-  multi: any[];
-
-  view: any[] = [700, 400];
-
-  // options
-  showXAxis: boolean = true;
-  showYAxis: boolean = true;
-  gradient: boolean = false;
-  showLegend: boolean = false;
-  showXAxisLabel: boolean = true;
-  xAxisLabel: string = '';
-  showYAxisLabel: boolean = true;
-  yAxisLabel: string = 'Sales';
-
-  colorScheme: any = {
-    domain: ['#1565C0', '#2196F3', '#81D4FA', '#FF9800', '#EF6C00'],
-  };
-
-  // line, area
-  autoScale: boolean = true;
-  username: string = '';
-
-  constructor(private _titleService: Title) {
+  constructor(private _titleService: Title, private _userService: UserManagerService) {
 
   }
 
   ngOnInit() {
+    let _self = this;
 
+    this._userService.getUserInfo().subscribe((data: {}) => {
+      console.log( data["userName"] );
+      console.log( data["emails"] );
+      console.log( JSON.stringify(data) );
+
+      this.perfil.emails = data["emails"];
+      this.perfil.name = data["name"];
+      //this.perfil.name.givenName = data["name"].givenName;
+      //this.perfil.name.familyName = data["name"].familyName;
+
+    })
   }
 
   // ngx transform using covalent digits pipe
