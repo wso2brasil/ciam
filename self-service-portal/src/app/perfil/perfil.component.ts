@@ -20,26 +20,16 @@ import { Perfil } from './perfil';
 })
 export class PerfilComponent implements OnInit {
 
-  private perfil: Perfil = new Perfil();
+  public perfil: Perfil = new Perfil();
 
-  constructor(private _titleService: Title, private _userService: UserManagerService) {
+  constructor(private _titleService: Title, private _userService: UserManagerService, private _oauthService: OAuthService) {
 
   }
 
   ngOnInit() {
     let _self = this;
-
-    this._userService.getUserInfo().subscribe((data: {}) => {
-      console.log( data["userName"] );
-      console.log( data["emails"] );
-      console.log( JSON.stringify(data) );
-
-      this.perfil.emails = data["emails"];
-      this.perfil.name = data["name"];
-      //this.perfil.name.givenName = data["name"].givenName;
-      //this.perfil.name.familyName = data["name"].familyName;
-
-    })
+    let claims: any = this._oauthService.getIdentityClaims();
+    this.perfil.firstName = claims.given_name;
   }
 
   // ngx transform using covalent digits pipe

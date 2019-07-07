@@ -5,15 +5,15 @@
 
 export const environment = {
   production: false,
-  api_gateway_url: 'https://localhost:8243',
-  user_info_url: "https://localhost:9443/oauth2/userinfo",
+  api_gateway_url: 'https://gateway.wso2training.com',
+  user_info_url: "https://identity.wso2training.com/oauth2/userinfo",
   username: "",
   openid : {
     strictDiscoveryDocumentValidation : false,
-    issuer : 'https://localhost:9445/oauth2/token',
-    loginUrl : "https://localhost:9445/oauth2/authorize",
-    redirectUri : "http://localhost:4200",
-    clientId : "DUam6EGdMmHmhKjBPt_G5XgtNFQa",
+    issuer : 'https://identity.wso2training.com/oauth2/token',
+    loginUrl : "https://identity.wso2training.com/oauth2/authorize",
+    redirectUri : "http://ciam.wso2training.com",
+    clientId : "XVcRah2DKEObGUEquyqwjn7GP9ga",
     scope : "openid profile email",
     oidc : true
   },

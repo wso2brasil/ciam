@@ -46,7 +46,7 @@ export class UserManagerService {
 
     public getUserInfo(): any {
         //let url = environment.user_info_url;
-        let url = "https://localhost:9443/scim2/Me";
+        let url = "https://identity.wso2training.com/scim2/Me";
         console.log( "get user info: " + url );
         console.log( "usermanager - environment.access_token: " + environment.access_token );
         return this.httpClient.get( url, this.getHttpOptions() );
