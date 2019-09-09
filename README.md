@@ -47,6 +47,15 @@ Body:
 }
 ```
 
+## Fake SMTP
+
+Fazer o download do FakeSMTP Server e executa-lo. A porta dele será utilizada na configuração do Self Sign Up do IS.
+
+## Configuração do IS
+
+Será necessário habilitar o self sign up conforme o link abaixo:
+https://docs.wso2.com/display/IS530/Self+Sign+Up+and+Account+Confirmation
+
 ## Configuração dos Volumes para o IS - MAC OS
 
 1. Acessar a pasta /Volumes e crias as seguintes pastas
